@@ -1,4 +1,5 @@
 ## With these two functions we enable a matrix to cache its own inverse for performance reasons
+## Special thanks to rdpeng for his outstanding stub files.
 
 ## Return a matrix that can cache its inverse 
 
@@ -46,5 +47,5 @@ cacheSolve <- function(x, ...) {
     x$setInverse(inverse)
     
     inverse
-
+    
 }
