@@ -1,7 +1,7 @@
 ## With these two functions we enable a matrix to cache its own inverse for performance reasons
 ## Special thanks to rdpeng for his outstanding stub files.
 
-## Return a matrix that can cache its inverse 
+## Function takes a matrix and returns a special "matrix" object that can get and set its inverse by cache
 
 makeCacheMatrix <- function(x = matrix()) {
     
@@ -29,7 +29,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Return the cached inverse of the given matrix if available, otherwise invert and cache
+## Function takes a special "matrix" object returned from makeCacheMatrix, 
+## returns the inverse of the matrix either by fetching from cache if available or calculating it anew
+## if the inverse was newly calculated it is cached for future use.
 
 cacheSolve <- function(x, ...) {
     
